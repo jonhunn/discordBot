@@ -1,8 +1,6 @@
 import random
 import csv
 
-#comment to test push
-
 #get list of movies from csv
 def getMovies():
     movies = "databases/movies.csv"
