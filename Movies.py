@@ -1,9 +1,10 @@
 import random
 import csv
+import Fetch as f
 
 #get list of movies from csv
 def getMovies():
-    movies = "databases/movies.csv"
+    movies = "databases/movies2.csv"
     theList = []
     with open(movies, 'r') as csvfile:
         movieList = csv.reader(csvfile)
@@ -16,10 +17,17 @@ def getMovies():
 #return the list to the bot
 def printList():
     m = getMovies()
-    print(m)
-    rm = random.sample(m, 3)
+    #get random list of movies
+    rm = random.sample(m, 5)
     str = ""
+    #sets the voting emoji, list at the top
     numbers = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:"]
-    for i in range(3):
+    for i in range(5):
         str += numbers[i] + "  " + rm[i] +  "\n"
+
+    for r in rm:
+        str+= f.getMovie(r)
+
     return str
+
+printList()

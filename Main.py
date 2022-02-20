@@ -1,6 +1,4 @@
 import os
 import Bot
 
-
-
-#Bot.startBot()
+Bot.startBot()
