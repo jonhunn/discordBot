@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
 
 #start the discord bot
@@ -38,7 +38,7 @@ def startBot():
             await message.add_reaction("<:thinkofthechildren:921776713065697310>")
 
 
-    client.run(TOKEN)
+    client.run(DISCORD_TOKEN)
 
 
-#startBot()
+startBot()ß
