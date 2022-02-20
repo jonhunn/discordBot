@@ -1,2 +1,7 @@
 ### dotenv ###
 .env
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
