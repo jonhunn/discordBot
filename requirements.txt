@@ -1,4 +1,4 @@
-###### Requirements without Version Specifiers ######
+###### Requirements ######
 dotenv
 discord.py
 Cinemagoer

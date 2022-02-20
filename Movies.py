@@ -4,7 +4,7 @@ import Fetch as f
 
 #get list of movies from csv
 def getMovies():
-    movies = "databases/movies2.csv"
+    movies = "databases/movies.csv"
     theList = []
     with open(movies, 'r') as csvfile:
         movieList = csv.reader(csvfile)
@@ -29,5 +29,3 @@ def printList():
         str+= f.getMovie(r)
 
     return str
-
-printList()

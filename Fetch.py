@@ -1,11 +1,9 @@
 from imdb import Cinemagoer
 
-# create an instance of the Cinemagoer class
 ia = Cinemagoer()
 
-movies = ["ghostbusters", "power rangers", "rat race", "fateful findings"]
 
-
+#fetches movie and creates a string of movie title, plot, and poster 
 def getMovie(x):
     str = ""
     movie = ia.search_movie(x)
@@ -18,18 +16,3 @@ def getMovie(x):
     poster = movie['full-size cover url']
     str += poster + "\n \n \n \n"
     return str
-
-
-# for movie in movies:
-#     print(getMovie(movie))
-
-# # get a movie
-# movie = ia.search_movie("ghostbusters")
-# id = movie[0].movieID
-# movie = ia.get_movie(id)
-# #print(movie.keys())
-# plot = movie['plot'][0]
-# print(plot)
-# print(movie.keys())
-# cover = movie['full-size cover url']
-# print(cover)
