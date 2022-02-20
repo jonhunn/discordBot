@@ -16,7 +16,7 @@ def getMovie(x):
     plot = movie['plot'][0]
     str += plot + "\n"
     poster = movie['full-size cover url']
-    str += poster + "\n"
+    str += poster + "\n \n \n \n"
     return str
 
 
