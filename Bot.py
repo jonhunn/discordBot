@@ -38,9 +38,5 @@ def startBot():
             await message.add_reaction("5️⃣")
             await message.add_reaction("<:thinkofthechildren:921776713065697310>")
 
-        if message.content.startswith('$list'):
-            reply = f.getMovie("ghostbusters")
-            await message.channel.send(reply)
-
 
     client.run(DISCORD_TOKEN)
