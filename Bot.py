@@ -23,7 +23,7 @@ def startBot():
             return
 
         if message.content.startswith('$hello'):
-            await message.channel.send('Hello!')
+            await message.channel.send('https://c.tenor.com/vBbeZbOu_OEAAAAC/hello-there-kenobi.gif')
 
         if message.content.startswith('$dontpanic'):
             await message.channel.send('a hoopy frood always knows where their towel is!')

@@ -22,10 +22,11 @@ def printList():
     str = ""
     #sets the voting emoji, list at the top
     numbers = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:"]
-    for i in range(5):
-        str += numbers[i] + "  " + rm[i] +  "\n"
 
     for r in rm:
         str+= f.getMovie(r)
+
+    for i in range(5):
+        str += numbers[i] + "  " + rm[i] +  "\n"
 
     return str
