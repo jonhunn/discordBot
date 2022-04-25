@@ -1,5 +1,4 @@
 # discordBot
-<<<<<<< HEAD
 Bot that serves a discord as a poll creator, complete with setting up emoji polls and researching IMDb. 
 
 ## 2022-04-25
@@ -7,6 +6,5 @@ added more functionality to the bot:
 cleaned up moviepoll, making each movie a post
 $requests handles requests by pinning a request to the channel
 added security to prevent non specified users from running admin tasks
-=======
+
 Bot that serves a discord as a poll creator, adds emoji to polls, and researching IMDb.
->>>>>>> 4e0240b7c80b45cbb99c6444df349b097d7e7093
