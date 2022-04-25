@@ -12,6 +12,7 @@ def getMovies():
             theList += item
     return(theList)
 
+#get 5 movies from the movie list
 def movieNight():
     m = getMovies()
     rm = random.sample(m, 5)
@@ -29,6 +30,8 @@ def printList():
     for r in rm:
         str.append(f.getMovie(r)[1])
 
+    #iterates through and appends movies to the end of the list
+    #to be called in "Bot"
     def getTitles():
         temp = []
         for i in range(5):

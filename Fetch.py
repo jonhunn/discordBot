@@ -17,6 +17,7 @@ ia = Cinemagoer()
 #fetches movie and creates a string of movie title, plot, and poster 
 def getMovie(x):
     str = ""
+    #needed to store list of movies from this fuction without dict or returning mutliple values
     l = []
     movie = ia.search_movie(x)
     id = movie[0].movieID
@@ -32,7 +33,7 @@ def getMovie(x):
     return l
 
 
-#create tinyurl for images
+#create tinyurl for images, cleans up the URLs for long IMDb/Amazon picture links
 def make_tiny(url):
     request_url = ('http://tinyurl.com/api-create.php?' + urlencode({'url':url}))   
     with contextlib.closing(urlopen(request_url)) as response:                      

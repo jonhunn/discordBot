@@ -57,6 +57,7 @@ def startBot():
                 print("Don't panic!")
                 await message.channel.send('https://static.wikia.nocookie.net/jurassicpark/images/b/b3/Ahahahreal.gif')
 
+        #listens for requests, then pins messages
         if message.content.startswith('$request'):
             if message.channel.name == "requests":
                 await message.pin()
