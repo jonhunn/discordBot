@@ -10,23 +10,31 @@ def getMovies():
         movieList = csv.reader(csvfile)
         for item in movieList:
             theList += item
-
     return(theList)
 
+def movieNight():
+    m = getMovies()
+    rm = random.sample(m, 5)
+    return rm
 
 #return the list to the bot
 def printList():
-    m = getMovies()
-    #get random list of movies
-    rm = random.sample(m, 5)
-    str = ""
+    rm = movieNight()
+    print(rm)
+    str = []
+
     #sets the voting emoji, list at the top
     numbers = [":one:", ":two:", ":three:", ":four:", ":five:", ":six:"]
 
     for r in rm:
-        str+= f.getMovie(r)
+        str.append(f.getMovie(r)[1])
 
-    for i in range(5):
-        str += numbers[i] + "  " + rm[i] +  "\n"
+    def getTitles():
+        temp = []
+        for i in range(5):
+            temp.append(numbers[i] + "  " + rm[i])
+        return temp
+    t = getTitles()
+    str.append(t)
 
     return str
