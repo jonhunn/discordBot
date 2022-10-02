@@ -19,7 +19,20 @@ def getMovie(x):
     str = ""
     #needed to store list of movies from this fuction without dict or returning mutliple values
     l = []
-    movie = ia.search_movie(x)
+    count = 0
+    #error handling for timeout issues at IMDb or bad movie title
+    while True:
+            movie = ia.search_movie(x)
+            count += 1
+            if count == 10: #kills the loop and ID's bad movie
+                print(f"Bad movie title: {x}")
+                break
+            if len(movie) != 0:
+                break
+    try:
+        id = movie[0].movieID
+    except IndexError:
+        return l #ends the code gracefully
     id = movie[0].movieID
     movie = ia.get_movie(id)
     title = movie['title']
