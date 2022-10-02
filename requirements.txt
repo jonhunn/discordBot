@@ -1,5 +1,4 @@
 ###### Requirements ######
-python-dotenv
+dotenv
 discord.py
 Cinemagoer
-contextlib

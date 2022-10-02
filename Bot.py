@@ -10,7 +10,7 @@ DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
 
 #start the discord bot
-client = discord.Client()
+client = discord.Client(intents=discord.Intents.default())
 
 def startBot():
     @client.event
@@ -36,6 +36,13 @@ def startBot():
 
         if message.content.startswith('$dontpanic'):
             await message.channel.send('a hoopy frood always knows where their towel is!')
+
+        if message.content.startswith('$doyoureallywannadoyoureallywannatasteit?'):
+            await message.channel.send('https://www.youtube.com/watch?v=_mrr3UNALww')
+
+        if message.content.startswith('$yesireallywannatasteit'):
+            await message.channel.send('https://media2.giphy.com/media/GqvcTWfl4W0RWBUG45/200.gif')
+
 
         if message.content.startswith('$movies'):
             if message.author.id == DID:
